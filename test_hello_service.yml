@@ -2,5 +2,5 @@ version: "3.8"
 services:
   hello:
     image: "13.125.230.56:5000/test_node"
-    port:
+    ports:
       - "8080:8080"
