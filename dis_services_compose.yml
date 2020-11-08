@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+# nginx
+  nginx:
+    image: "nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+# api gateway
+  immigration:
+    image: "0816jinjin/immigration"
+# endpoint service
+  jeju:
+    image: "smj0385/jeju"
+    ports:
+      - "8080:8080"
+  gangwon:
+    image: "toinin4795/gangwon"
+  hamgyeong:
+    image: "yeoul/hamgyeong"
+  hwanghae:
+    image: "toinin4795/hwanghae"
+  pyeongan:
+    image: "0816jinjin/pyeongan"
+# Repo
+  dokdo:
+    image: "smj0385/dokdo"
+  jeonju:
+    image: "yeoul/jeonju"
+  gyeongsang:
+    image: "0816jinjin/gyeongsang"
